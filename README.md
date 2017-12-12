@@ -3,7 +3,7 @@ Dánh giá chức năng trong thư mục document
 # shop
 
 - Menu động trên layout sử dụng View composer: 2 điểm --Done
-- Thêm sản phẩm: 2 điểm 
+- Thêm sản phẩm: 2 điểm --Done
 - Sửa sản phẩm: 2 điểm
 - Xóa sản phẩm: 1 điểm
 - Liệt kê danh sách sản phẩm trong phần quản trị: 1 điểm --done
