@@ -51,7 +51,7 @@ class CakeController extends Controller
         $cake->Storage = $request->input('Storage');
         $cake->save();
 
-        return redirect('/cakes');
+        return redirect('/cakes')->with('success','Cake create');
     }
 
     /**

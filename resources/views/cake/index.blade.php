@@ -2,7 +2,7 @@
 @if (Auth::user() && Auth::user()->role == 'admin')
     'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'
 @else
-
+    @include('errormessage')
     @section('body')
         {{--  @include('navigation')  --}}
         <div class="container">
@@ -24,9 +24,9 @@
                         <td>{{$value->Name}}</td>
                         <td>{{$value->Price}}</td>
                         <td>{{$value->Storage}}</td> 
-                        <td>
-                            <a class="btn btn-small btn-success" href="{{URL::to('cakes/'.$value.id)}}">Show detail</a>
-                            <a class="btn btn-small btn-info" href="{{URL::to('cakes/'.$value.id.'/edit')}}">Edit detail</a>
+                        <td width="20%">
+                            <a class="btn btn-small btn-success" href="cakes/{{$value->id}}">Show detail</a>
+                            <a class="btn btn-small btn-info" href="cakes/{{$value->id}}/edit">Edit detail</a>
                         </td>
                     </tr>
                     @endforeach
