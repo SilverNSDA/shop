@@ -41,6 +41,17 @@ class CakeController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request,[
+            'Name'=>'required',
+            
+        ]);
+        $cake = new Cake;
+        $cake->Name=$request->input('Name');
+        $cake->Price=$request->input('Price');
+        $cake->Storage = $request->input('Storage');
+        $cake->save();
+
+        return redirect('/cakes');
     }
 
     /**
@@ -52,6 +63,8 @@ class CakeController extends Controller
     public function show($id)
     {
         //
+        $cake = Cake::find($id);
+        return view('cake.show')->with('cake',$cake);
     }
 
     /**

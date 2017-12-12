@@ -12,11 +12,11 @@
                 <div class="col-sm-8 inner">
                     <h2> Create a cake's record</h2>
                     {{Html::ul($errors->all())}}
-                    {{Form::open(array('url'=>'cakes'))}}
+                    {{Form::open(array('url'=>'cakes','action'=>'CakeController@store','method'=>'POST'))}}
                     <div class="col-sm-8">
                         <div class="form-group" style="text-align:center;">
                             {{Form::label('Name','Name')}}
-                            {{Form::text('name',Input::old('name'), array('class'=>'form-control', 'style'=>'width:75%; text-align:center; float: right;'))}}
+                            {{Form::text('Name',Input::old('Name'), array('class'=>'form-control', 'style'=>'width:75%; text-align:center; float: right;'))}}
                         </div>
                     </div>
                     <div class="col-sm-8">
