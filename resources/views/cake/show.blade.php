@@ -10,6 +10,10 @@
                 <p>Storage: {{$cake->Storage}}</p>
                 <p>Created date: {{$cake->created_at}}</p>
                 <p>Latest update: {{$cake->updated_at}}</p>
+                <p>
+                    
+                    <a class="btn btn-small btn-info" href="{{$cake->id}}/edit">Edit detail</a>
+                </p>
             @else
                 <h1> Cake not found</h1>
             @endif

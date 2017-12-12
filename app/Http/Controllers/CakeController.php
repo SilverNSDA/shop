@@ -76,6 +76,8 @@ class CakeController extends Controller
     public function edit($id)
     {
         //
+        $cake = Cake::find($id);
+        return view('cake.edit')->with('cake',$cake);
     }
 
     /**
@@ -88,6 +90,17 @@ class CakeController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->validate($request,[
+            'Name'=>'required',
+            
+        ]);
+        $cake = Cake::find($id);
+        $cake->Name=$request->input('Name');
+        $cake->Price=$request->input('Price');
+        $cake->Storage = $request->input('Storage');
+        $cake->save();
+
+        return redirect('/cakes')->with('success','Cake updated');
     }
 
     /**
