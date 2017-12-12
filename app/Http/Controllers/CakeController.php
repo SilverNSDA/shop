@@ -112,5 +112,8 @@ class CakeController extends Controller
     public function destroy($id)
     {
         //
+        $cake=Cake::find($id);
+        $cake->delete();
+        return redirect('/cakes')->with('success','Cake deleted');
     }
 }

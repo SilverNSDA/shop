@@ -13,6 +13,10 @@
                 <p>
                     
                     <a class="btn btn-small btn-info" href="{{$cake->id}}/edit">Edit detail</a>
+                    {{Form::open(['action'=>['CakeController@destroy',$cake->id], 'method'=>'POST', 'class'=>''])}}
+                        {{Form::hidden('_method','DELETE')}}
+                        {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                    {{Form::close()}}
                 </p>
             @else
                 <h1> Cake not found</h1>

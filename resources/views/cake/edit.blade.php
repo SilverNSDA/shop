@@ -6,8 +6,6 @@
     @section('body')
         <div class="container"style="">
             @include('cake.navbar')
-
-            
             <div class="outer">
                 <div class="col-sm-8 inner">
                     <h2> Edit a cake's record</h2>
