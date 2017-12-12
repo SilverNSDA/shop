@@ -2,11 +2,12 @@
 @if (Auth::user() && Auth::user()->role == 'admin')
     'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'
 @else
-    {{--  @include('errormessage')  --}}
+    
     @section('body')
         {{--  @include('navigation')  --}}
         <div class="container">
             @include('cake.navbar')
+            @include('errormessage')
             <h2>All Cakes</h2>
             <table class="table table-striped table-bordered">
                 <thread>

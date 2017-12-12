@@ -43,6 +43,8 @@ class CakeController extends Controller
         //
         $this->validate($request,[
             'Name'=>'required',
+            'Price'=> 'numeric',
+            'Storage'=>'integer'
             
         ]);
         $cake = new Cake;
@@ -51,7 +53,7 @@ class CakeController extends Controller
         $cake->Storage = $request->input('Storage');
         $cake->save();
 
-        return redirect('/cakes')->with('success','Cake create');
+        return redirect('/cakes')->with('success','Cake created');
     }
 
     /**
@@ -92,6 +94,8 @@ class CakeController extends Controller
         //
         $this->validate($request,[
             'Name'=>'required',
+            'Price'=> 'numeric',
+            'Storage'=>'integer'
             
         ]);
         $cake = Cake::find($id);
