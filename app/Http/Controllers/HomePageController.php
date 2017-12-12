@@ -12,5 +12,8 @@ class HomePageController extends Controller
     public function shop(){
         return view('Shop');
     }
+    public function homeRedirect(){
+        return redirect('/');
+    }
     
 }

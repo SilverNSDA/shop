@@ -99,7 +99,7 @@ a:focus, a:hover {
 	width: 10%;
 	float: left;
 	height: 80px;
-	border-right: 1px solid #777;
+	/* border-right: 1px solid #777; */
 }
 
 .agileinfomenu p {

@@ -13,3 +13,6 @@
 
 Route::get('/', 'HomePageController@home');
 Route::get('/shop','HomePageController@shop');
+Route::get('/home','HomePageController@homeRedirect');
+
+Route::resource('/cakes','CakeController');
