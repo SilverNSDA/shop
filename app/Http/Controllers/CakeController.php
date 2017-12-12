@@ -29,6 +29,7 @@ class CakeController extends Controller
     public function create()
     {
         //
+        return View::make('cake.create');
     }
 
     /**

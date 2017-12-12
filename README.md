@@ -1,3 +1,5 @@
+1560008
+Dánh giá chức năng trong thư mục document
 # shop
 
 - Menu động trên layout sử dụng View composer: 2 điểm --Done

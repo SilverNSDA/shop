@@ -1,5 +1,3 @@
-
-
 @extends('header')
 @if (Auth::user() && Auth::user()->role == 'admin')
     'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'
@@ -7,16 +5,8 @@
 
     @section('body')
         {{--  @include('navigation')  --}}
-        <div class="cointainer">
-            <nav class="navbar navbar-inverse">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{URL::to('cake')}}">Cakes list</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="{{URL::to('cake')}}"> All cakes</a></li>
-                    <li><a href="{{URL::to('cake/create')}}"> Create new cake</a></li>
-                </ul>
-            </nav>
+        <div class="container">
+            @include('cake.navbar')
             <h2>All Cakes</h2>
             <table class="table table-striped table-bordered">
                 <thread>
