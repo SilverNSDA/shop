@@ -1,7 +1,6 @@
 @extends('header')
 @if (Auth::user() && Auth::user()->role == 'admin')
-    'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'
-@else
+
     @include('errormessage')
     @section('body')
             @if(isset($cake))
@@ -23,4 +22,6 @@
             @endif
     @endsection
 
+@else
+    'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'
 @endif

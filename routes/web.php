@@ -16,3 +16,6 @@ Route::get('/shop','HomePageController@shop');
 Route::get('/home','HomePageController@homeRedirect');
 
 Route::resource('/cakes','CakeController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

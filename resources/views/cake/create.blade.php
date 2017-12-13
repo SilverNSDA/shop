@@ -1,7 +1,7 @@
 @extends('header')
 @if (Auth::user() && Auth::user()->role == 'admin')
-    'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'
-@else
+    
+
     
     @section('body')
         <div class="container"style="">
@@ -39,5 +39,6 @@
             
         </div>
     @endsection
-
+@else
+    'THIS IS WHAT I WANT ONLY ADMIN USERS TO SEE!'
 @endif

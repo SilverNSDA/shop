@@ -31,6 +31,16 @@
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700"			   type="text/css" media="all">
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700" type="text/css" media="all">
 		<!-- //Fonts -->
+		
+    
+
+		<!-- CSRF Token -->
+		<meta name="csrf-token" content="{{ csrf_token() }}">
+
+		<title>{{ config('app.name', 'Laravel') }}</title>
+
+		<!-- Styles -->
+		{{--  <link href="{{ asset('css/app.css') }}" rel="stylesheet">  --}}
     </head>
     <body>
         @yield('body')
